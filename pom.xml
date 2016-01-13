@@ -76,6 +76,16 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+        	<groupId>org.jasig.cas</groupId>
+        	<artifactId>cas-server-support-jdbc</artifactId>
+        	<version>${cas.version}</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework.security</groupId>
+        	<artifactId>spring-security-web</artifactId>
+        	<version>4.0.3.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <properties>
