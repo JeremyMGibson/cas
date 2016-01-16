@@ -86,6 +86,12 @@
         	<artifactId>spring-security-web</artifactId>
         	<version>4.0.3.RELEASE</version>
         </dependency>
+        <dependency>
+		    <groupId>org.jasig.cas</groupId>
+		    <artifactId>cas-server-support-rest</artifactId>
+		    <version>${cas.version}</version>
+		    <scope>runtime</scope>
+		</dependency>
     </dependencies>
 
     <properties>
