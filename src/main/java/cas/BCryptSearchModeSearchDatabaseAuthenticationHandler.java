@@ -8,6 +8,7 @@ import org.jasig.cas.adaptors.jdbc.AbstractJdbcUsernamePasswordAuthenticationHan
 import org.jasig.cas.authentication.HandlerResult;
 import org.jasig.cas.authentication.PreventedException;
 import org.jasig.cas.authentication.UsernamePasswordCredential;
+import org.jasig.cas.authentication.principal.SimplePrincipal;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 /**
@@ -36,7 +37,7 @@ AbstractJdbcUsernamePasswordAuthenticationHandler  {
     	throw new FailedLoginException("Password does not match value on record.");
     }
     
-    return createHandlerResult(credentials, this.principalFactory.createPrincipal(username), null);
+    return createHandlerResult(credentials, new SimplePrincipal(username), null);
   }
 
   /**

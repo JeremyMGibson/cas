@@ -81,21 +81,10 @@
         	<artifactId>cas-server-support-jdbc</artifactId>
         	<version>${cas.version}</version>
         </dependency>
-        <dependency>
-        	<groupId>org.springframework.security</groupId>
-        	<artifactId>spring-security-web</artifactId>
-        	<version>4.0.3.RELEASE</version>
-        </dependency>
-        <dependency>
-		    <groupId>org.jasig.cas</groupId>
-		    <artifactId>cas-server-support-rest</artifactId>
-		    <version>${cas.version}</version>
-		    <scope>runtime</scope>
-		</dependency>
     </dependencies>
 
     <properties>
-        <cas.version>4.1.3</cas.version>
+        <cas.version>4.0.0</cas.version>
         <maven-jetty-plugin.version>9.3.6.v20151106</maven-jetty-plugin.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
