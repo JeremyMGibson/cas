@@ -78,7 +78,7 @@
 						<div class="login-header"></div>
 						<div class="login-body">
 						<h2>Login</h2>
-						<form:form method="post" id="fm1" commandName="${commandName}" htmlEscape="true" class="form-vertical" role="form">
+						<form:form method="post" id="fm1" commandName="${commandName}" class="form-vertical" role="form">
 							<div class="form-group ">
 								<label for="username" class="sr-only">Email:</label>
 								<div class="input-group">
