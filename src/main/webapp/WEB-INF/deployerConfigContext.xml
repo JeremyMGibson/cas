@@ -87,11 +87,6 @@
         </property>
     </bean>
 
-    <!-- Required for proxy ticket mechanism. -->
-    <bean id="proxyAuthenticationHandler"
-          class="org.jasig.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler"
-          p:httpClient-ref="httpClient" />
-
     <!--
        | TODO: Replace this component with one suitable for your enviroment.
        |
@@ -105,17 +100,13 @@
        | * org.jasig.cas.support.spnego.authentication.handler.support.JCIFSSpnegoAuthenticationHandler
        -->
     <bean id="primaryAuthenticationHandler"
-          class="org.jasig.cas.authentication.AcceptUsersAuthenticationHandler">
-        <property name="users">
-            <map>
-                <entry key="casuser" value="Mellon"/>
-            </map>
-        </property>
+          class="cas.BCryptSearchModeSearchDatabaseAuthenticationHandler"
+      p:dataSource-ref="datasource"
+      p:sql="select password from account where email=? and enabled=1 and locked=0" />
+      
+   	<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/goji-portal" />
     </bean>
-
-    <!-- Required for proxy ticket mechanism -->
-    <bean id="proxyPrincipalResolver"
-          class="org.jasig.cas.authentication.principal.BasicPrincipalResolver" />
 
     <!--
        | Resolves a principal from a credential using an attribute repository that is configured to resolve
