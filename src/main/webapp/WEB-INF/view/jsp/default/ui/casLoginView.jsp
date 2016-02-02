@@ -83,7 +83,7 @@
 								<label for="username" class="sr-only">Email:</label>
 								<div class="input-group">
 									<span class="input-group-addon"><i class="icon-user"></i></span>
-									<form:input type="email" cssClass="form-control input-lg" cssErrorClass="error" id="username" size="25" tabindex="1" accesskey="${userNameAccessKey}" path="username" autocomplete="off" htmlEscape="true" placeholder="Email Address"  />
+									<form:input type="email" cssClass="form-control input-lg" cssErrorClass="error" id="username" size="25" tabindex="1" accesskey="${userNameAccessKey}" path="username" autocomplete="off" placeholder="Email Address"  />
 								</div>
 								
 							</div>
@@ -91,7 +91,7 @@
 								<label for="password" class="sr-only">Password:</label>
 								<div class="input-group">
 									<span class="input-group-addon"><i class="icon-key"></i></span>
-									<form:password cssClass="form-control input-lg" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off" placeholder="Password"/>
+									<form:password cssClass="form-control input-lg" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" autocomplete="off" placeholder="Password"/>
 								</div>
 							</div>
 							
